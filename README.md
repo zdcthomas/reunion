@@ -97,7 +97,7 @@ Add to the existing Reunion class so that it supports the interaction pattern be
 # => [#<Activity:0x007fe4ca1d9438 ...>]
 ```
 
-# Iteration 4: Reunion Calculations
+### Iteration 4: Reunion Calculations
 
 Add to the existing Reunion class so that it supports the interaction pattern below.
 
@@ -130,3 +130,7 @@ Jim: 20
 Joe: -10
 John: -10
 ```
+
+### Iteration 5: ERB
+
+Research ERB. Create a template for a webpage using HTML and ERB that will display important details of a Reunion. Create a runner file to create a Reunion with Activities, and use the template to generate an HTML page that you can open in your browser.
