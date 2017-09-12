@@ -9,24 +9,25 @@
 
 ## Tasks
 
-We're developing a small application to split expenses after a group of friends get together for a reunion. This will track how much each person spent on a particular activity, how much each person owed, and ultimately print out a summary of how much each person owes or is owed.
+We're developing a small application to split expenses after a group of friends get together for a reunion. This will track how much each person spent on a particular activity, how much each person owes across all activities, and ultimately print out a summary of how much each person owes or is owed.
 
 Use tests to drive your development.
 
 ### Iteration 1: Creating Activities
 
-Add to the existing Activity class so that it supports the following functionality. 
+Add to the existing Activity class so that it supports the following functionality.
 
 * An Activity has a name  
-* An Activity has participants, participants have a name and an amount they've paid  
+* An Activity has participants
+  * participants are represented with a hash and have a name and an amount they've paid for that activity  
 * You can get the total cost of an activity   
 
 ### Iteration 2: Activity Calculations
 
 Add to the Activity class so that it supports the following functionality. Note, it is assumed that the cost of each activity is split evenly between all participants.
 
-* You can split the check
-* You can find out how much each person is owed
+* You can split the cost of an activity
+* You can find out how much each person is owed/owes
   * If a participant paid less than their fair share they owe a positive amount.
   * If a participant paid more than their fair share they owe a negative amount (meaning they are owed money).  
 
@@ -35,20 +36,20 @@ Add to the Activity class so that it supports the following functionality. Note,
 
 Add to the existing Reunion class so that it supports the following functionality.
 
-* A Reunion has a location 
-* A Reunion has activities  
+* A Reunion has a location
+* A Reunion has Activities  
 * You can add Activities to a Reunion
 
 ### Iteration 4: Reunion Calculations
 
 Add to the existing Reunion class so that it supports the following functionality.
 
-* You can find the total cost of a Reunion 
-* You can create a breakdown of the Reunion 
+* You can find the total cost of a Reunion
+* You can create a breakdown of the Reunion which figures out who owes/is owed how much
   * Consider all of the Activities
   * If a participant paid less than their fair share they owe a positive amount.
   * If a participant paid more than their fair share they owe a negative amount (meaning they are owed money).
-  * You can print a summary of who owes what
+* You can print a summary of total owed amounts per person
 
 
 ### Iteration 5: ERB
