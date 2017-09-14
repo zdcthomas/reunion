@@ -17,17 +17,18 @@ Use tests to drive your development.
 
 Add to the existing Activity class so that it supports the following functionality.
 
-* An Activity has a name  
+* An Activity has a name, such as 'hiking'  
 * An Activity has participants
   * participants are represented with a hash and have a name and an amount they've paid for that activity  
-* You can get the total cost of an activity   
+* You can add participants to an Activity
+* You can evaluate the total cost of an activity   
 
 ### Iteration 2: Activity Calculations
 
 Add to the Activity class so that it supports the following functionality. Note, it is assumed that the cost of each activity is split evenly between all participants.
 
 * You can split the cost of an activity
-* You can find out how much each person is owed/owes
+* You can evaluate out how much each person is owed/owes
   * If a participant paid less than their fair share they owe a positive amount.
   * If a participant paid more than their fair share they owe a negative amount (meaning they are owed money).  
 
@@ -44,8 +45,8 @@ Add to the existing Reunion class so that it supports the following functionalit
 
 Add to the existing Reunion class so that it supports the following functionality.
 
-* You can find the total cost of a Reunion
-* You can create a breakdown of the Reunion which figures out who owes/is owed how much
+* You can evaluate the total cost of a Reunion
+* You can create a total breakdown of the Reunion which figures out who owes/is owed how much
   * Consider all of the Activities
   * If a participant paid less than their fair share they owe a positive amount.
   * If a participant paid more than their fair share they owe a negative amount (meaning they are owed money).
