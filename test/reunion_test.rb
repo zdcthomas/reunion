@@ -3,6 +3,7 @@ require 'minitest/test'
 require 'minitest/autorun'
 require 'minitest/pride'
 require 'mocha'
+require './lib/activity'
 require './lib/reunion'
 
 class ReunionTest < Minitest::Test
@@ -19,15 +20,14 @@ class ReunionTest < Minitest::Test
   
   def test_reunion_begins_with_no_activities
     reunion = Reunion.new("Denver")
-    assert_equal [], reunion.activites
+    assert_equal [], reunion.activities
   end 
 
   def test_reunion_can_add_activities
     reunion = Reunion.new("Denver")
-    hiking = Activity.new
-    hiking.expects(:name).returns("Hiking")
+    hiking = Activity.new("Hiking")
     reunion.add_activity(hiking)
-    assert_equal [hiking], reunion.activites
+    assert_equal [hiking], reunion.activities
   end 
 
 end
