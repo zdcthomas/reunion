@@ -1,3 +1,4 @@
+
 class Reunion
   attr_reader :location,
               :activities
@@ -9,5 +10,25 @@ class Reunion
 
   def add_activity(activity)
     @activities << activity
+  end 
+
+  def total_cost
+    sum = 0
+    @activities.each do |activity|
+      sum += activity.total
+    end 
+    sum
+  end
+
+  def breakdown
+    breakdown = Hash.new
+    owed = Hash.new
+    @activities.each do |activity|
+      activity.participants.keys.each do |participant|
+        owed[participant] = activity.debt(participant)
+      end 
+      name = activity.name
+      breakdown[name] = owed
+    end 
   end 
 end

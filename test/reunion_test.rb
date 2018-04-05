@@ -26,8 +26,14 @@ class ReunionTest < Minitest::Test
   def test_reunion_can_add_activities
     reunion = Reunion.new("Denver")
     hiking = Activity.new("Hiking")
+    bowling = Activity.new("Bowling")
     reunion.add_activity(hiking)
     assert_equal [hiking], reunion.activities
+    reunion.add_activity(bowling)
+    assert_equal [hiking, bowling], reunion.activities
+    assert reunion.activities[0].participants
+    assert reunion.activities[1].participants
+
   end 
 
   def test_total_reunion_cost
@@ -58,6 +64,6 @@ class ReunionTest < Minitest::Test
 
     breakdown = reunion.breakdown 
     expected = {"Hiking" => {"Jane" => 5, "Bob" => 0, "Same" => -3}, "Bowling" => {"Jane" => -5, "Bob" => 5, "Sam" => -10}}
-    assert_equal expeceted, actual
+    assert_equal expected, breakdown
   end 
 end
