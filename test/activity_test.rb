@@ -18,7 +18,7 @@ class ActivityTest < Minitest::Test
 
   def test_add_participants_to_activity
     
-    hiking = Activity.new("Hiking")
+    hiking = Activity.new("Hiking", 30)
     hiking.add_participant("Jane", 15)
     assert_equal ({"Jane" => 15}), hiking.participants
     hiking.add_participant("Bob", 10)
@@ -27,7 +27,7 @@ class ActivityTest < Minitest::Test
 
   def test_evaluate_total_cost_of_activity
      
-    hiking = Activity.new("Hiking")
+    hiking = Activity.new("Hiking", 30)
     actual = hiking.total
     assert_instance_of Integer, actual
   end
@@ -44,6 +44,7 @@ class ActivityTest < Minitest::Test
   end 
 
   def test_debts_returns_who_is_owed_what
+    
     hiking = Activity.new("Hiking", 30)
     hiking.add_participant("Jeff", 2)
     hiking.add_participant("Jane", 15)
