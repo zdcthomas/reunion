@@ -7,6 +7,15 @@
 1. Run `bundle` from the command line.
 1. Run `rake` from the command line.
 
+## Synthesis
+
+Included with your pull request, you must submit answers to the following questions:
+
+* What do you think we were trying to get you to learn with this challenge?
+* Outline in words (at least 5-6 sentences) what your code is doing in order to solve this problem.
+* What was the most difficult portion of this for you?
+* What came naturally to you?
+
 ## Tasks
 
 We're developing a small application to split expenses after a group of friends get together for a reunion. This will track how much each person spent on a particular activity, how much each person owes across all activities, and ultimately print out a summary of how much each person owes or is owed.
