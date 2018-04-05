@@ -32,4 +32,26 @@ class ActivityTest < Minitest::Test
     assert_instance_of Integer, actual
   end
 
+  def test_split_cost_of_activity
+    hiking = Activity.new("Hiking", 30)
+    hiking.add_participant("Bob", 10)
+    hiking.add_participant("Jane", 15)
+    actual = hiking.split_cost
+    assert_equal 15, actual
+    hiking.add_participant("Jeff", 2)
+    actual = hiking.split_cost
+    assert_equal 10, actual
+  end 
+
+  def test_debts_returns_who_is_owed_what
+    hiking = Activity.new("Hiking", 30)
+    hiking.add_participant("Jeff", 2)
+    hiking.add_participant("Jane", 15)
+    hiking.add_participant("Bob", 10)
+    assert_equal 10, hiking.split_cost
+    assert_equal -5, hiking.debt("Jane")
+    assert_equal 8, hiking.debt("Jeff")
+    assert_equal 0, hiking.debt("Bob")
+  end 
+
 end
