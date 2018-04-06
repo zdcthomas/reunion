@@ -25,7 +25,6 @@ class Reunion
     owed = Hash.new
     @activities.each do |activity|
       activity.participants.keys.each do |participant|
-        owed = Hash.new
         owed[participant] = activity.debt(participant)
       end 
       name = activity.name
