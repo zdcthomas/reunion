@@ -1,0 +1,5 @@
+#### What do you think we were trying to get you to learn with this challenge?
+ * It seems we were meant to learn how to cope with a set of instructions which were intentionally vague and uselessly specific. Many things which did not need to be specified were, and many things which needed to be specified were not.
+ * As much as I could, I attempted to explicitly follow the spec. Whenever something seemed ambiguous I tried to solve the problem in the simplest possible way. What was mostly difficult was not being able to refactor the participants the way I wanted to. The spec explicitly asks for participants to be represented as a has, whereas it would be much easier to represent them as a class which could be instantiated with some amount of money they're able to spend.
+ * The most difficult portion was most likely iterating through multiple hashes, as I am less comfortable with hashes than I am with classes and instances. 
+ * I find the process of TDD to be very natural now, and I was able to use it as a good way to stay on track while trying to parse out difficult specifications. 
