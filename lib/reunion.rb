@@ -1,4 +1,4 @@
-
+# require 'pry'
 class Reunion
   attr_reader :location,
               :activities
@@ -25,10 +25,12 @@ class Reunion
     owed = Hash.new
     @activities.each do |activity|
       activity.participants.keys.each do |participant|
+        # binding.pry
         owed[participant] = activity.debt(participant)
       end 
       name = activity.name
       breakdown[name] = owed
     end 
+    breakdown
   end 
 end

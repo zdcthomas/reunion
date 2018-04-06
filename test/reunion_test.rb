@@ -49,21 +49,15 @@ class ReunionTest < Minitest::Test
   def test_debt_breakdown
     reunion = Reunion.new("Denver")
     hiking = Activity.new("Hiking", 30)
-    bowling = Activity.new("Bowling", 30)
 
     hiking.add_participant("Jane", 5)
     hiking.add_participant("Bob", 10)
     hiking.add_participant("Sam", 13)
 
-    bowling.add_participant("Jane", 15)
-    bowling.add_participant("Bob", 5)
-    bowling.add_participant("Sam", 20)
-
     reunion.add_activity(hiking)
-    reunion.add_activity(bowling)
-
     breakdown = reunion.breakdown 
-    expected = {"Hiking" => {"Jane" => 5, "Bob" => 0, "Same" => -3}, "Bowling" => {"Jane" => -5, "Bob" => 5, "Sam" => -10}}
+    expected = {"Hiking" => {"Jane" => 5, "Bob" => 0, "Sam" => -3}}
     assert_equal expected, breakdown
-  end 
+    
+  end
 end

@@ -29,7 +29,7 @@ class ActivityTest < Minitest::Test
      
     hiking = Activity.new("Hiking", 30)
     actual = hiking.total
-    assert_instance_of Integer, actual
+    assert_equal 30, actual
   end
 
   def test_split_cost_of_activity
